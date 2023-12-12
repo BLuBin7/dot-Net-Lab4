@@ -53,12 +53,14 @@
       <DependentUpon>AirTicketBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="Flight.cs" />
     <Compile Include="FlightListForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FlightListForm.Designer.cs">
       <DependentUpon>FlightListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlightRegistration.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +75,7 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="AirTicketBooking.resx">
       <DependentUpon>AirTicketBooking.cs</DependentUpon>
     </EmbeddedResource>

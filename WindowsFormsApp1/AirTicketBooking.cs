@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
             if (currentUser != null)
             {
                 strRegistration += $"\tCustomerID: {currentUser.CustomerID}\n";
-                strRegistration += $"\tCustomerName: {currentUser.UserName}\n";
+                strRegistration += $"\tCustomerName: {currentCustomer.CustomerName}\n";
             }
 
             decimal sumCredit = 0; // Use decimal for currency values
@@ -161,34 +161,29 @@ namespace WindowsFormsApp1
         private void lsbFlightList_DrawItem(object sender, DrawItemEventArgs e)
         {
             e.DrawBackground();
+            e.DrawFocusRectangle();
 
-            if (e.Index >= 0)
+            ListBox listBox = sender as ListBox;
+            if (listBox != null && e.Index >= 0)
             {
-                string itemText = lsbFlightList.Items[e.Index].ToString();
+                string itemText = listBox.Items[e.Index].ToString();
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
 
-                StringFormat sf = new StringFormat();
-                sf.LineAlignment = StringAlignment.Center;
-                sf.Alignment = StringAlignment.Center;
-
-                Brush textBrush = (e.State & DrawItemState.Selected) == DrawItemState.Selected ? Brushes.White : Brushes.Black;
-
-                e.Graphics.DrawString(itemText, e.Font, textBrush, e.Bounds, sf);
-
-                if (e.Index < lsbFlightList.Items.Count - 1)
+                using (Brush brush = new SolidBrush(e.ForeColor))
                 {
-                    using (Pen pen = new Pen(SystemColors.ControlDark))
-                    {
-                        e.Graphics.DrawLine(pen, e.Bounds.Left, e.Bounds.Bottom, e.Bounds.Right, e.Bounds.Bottom);
-                    }
+                    e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds, stringFormat);
                 }
-
-                e.DrawFocusRectangle();
             }
         }
 
 
             private void lsbFlightList_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            lsbFlightList.DrawMode = DrawMode.OwnerDrawFixed;
+            lsbFlightList.DrawItem += new DrawItemEventHandler(lsbFlightList_DrawItem);
             lsbFlightList.Invalidate();
         }
     }

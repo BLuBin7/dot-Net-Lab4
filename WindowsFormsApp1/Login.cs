@@ -40,14 +40,21 @@ namespace WindowsFormsApp1
             UserList.Add(new User("1", "1", "111"));
 
 
-
             FlightList = new List<Flight>();
-            FlightList.Add(new Flight("FL0001", DateTime.Now, DateTime.Now, "Bamboo",90000));
-            FlightList.Add(new Flight("FL0002", DateTime.Now, DateTime.Now, "VN",20000));
-            FlightList.Add(new Flight("FL0003", DateTime.Now, DateTime.Now, "US",30000));
-            FlightList.Add(new Flight("FL0004", DateTime.Now, DateTime.Now, "UK",40000));
-            FlightList.Add(new Flight("FL0005", DateTime.Now, DateTime.Now, "JP",50000));
-            FlightList.Add(new Flight("FL0006", DateTime.Now, DateTime.Now, "CN",60000));
+            FlightList.Add(new Flight("FL0001", DateTime.Now, DateTime.Now.AddHours(2), "Thai",90000));
+            FlightList.Add(new Flight("FL0002", DateTime.Now, DateTime.Now.AddHours(3), "KR",20000));
+            FlightList.Add(new Flight("FL0003", DateTime.Now, DateTime.Now.AddHours(4), "Indonesia",30000));
+            FlightList.Add(new Flight("FL0004", DateTime.Now, DateTime.Now.AddHours(5), "India",40000));
+            FlightList.Add(new Flight("FL0005", DateTime.Now, DateTime.Now.AddHours(6), "JP",50000));
+            FlightList.Add(new Flight("FL0007", DateTime.Now, DateTime.Now.AddHours(7), "CN",60000));
+            FlightList.Add(new Flight("FL0008", DateTime.Now, DateTime.Now.AddHours(8), "AU", 60000));
+            FlightList.Add(new Flight("FL0009", DateTime.Now, DateTime.Now.AddHours(9), "FR", 60000));
+            FlightList.Add(new Flight("FL0010", DateTime.Now, DateTime.Now.AddHours(9), "DE", 60000));
+            FlightList.Add(new Flight("FL0011", DateTime.Now, DateTime.Now.AddHours(10), "IT", 60000));
+            FlightList.Add(new Flight("FL0012", DateTime.Now, DateTime.Now.AddHours(11), "US", 60000));
+            FlightList.Add(new Flight("FL0013", DateTime.Now, DateTime.Now.AddHours(12), "UK", 60000));
+            FlightList.Add(new Flight("FL0014", DateTime.Now, DateTime.Now.AddHours(12), "Canada", 60000));
+
 
             FlightRegistrations = new List<FlightRegistration>();
 

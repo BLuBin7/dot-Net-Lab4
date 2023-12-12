@@ -40,12 +40,12 @@
             // 
             // lsbFlightList
             // 
-            this.lsbFlightList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbFlightList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbFlightList.FormattingEnabled = true;
-            this.lsbFlightList.ItemHeight = 20;
+            this.lsbFlightList.ItemHeight = 24;
             this.lsbFlightList.Location = new System.Drawing.Point(28, 48);
             this.lsbFlightList.Name = "lsbFlightList";
-            this.lsbFlightList.Size = new System.Drawing.Size(190, 324);
+            this.lsbFlightList.Size = new System.Drawing.Size(190, 316);
             this.lsbFlightList.TabIndex = 0;
             this.lsbFlightList.SelectedIndexChanged += new System.EventHandler(this.lsbFlightList_SelectedIndexChanged);
             // 

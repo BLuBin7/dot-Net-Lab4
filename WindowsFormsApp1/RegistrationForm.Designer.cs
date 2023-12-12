@@ -205,6 +205,7 @@
             // 
             // picAvatar
             // 
+            this.picAvatar.BackColor = System.Drawing.SystemColors.Control;
             this.picAvatar.Location = new System.Drawing.Point(519, 45);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(255, 246);
